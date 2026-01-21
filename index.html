@@ -29,9 +29,14 @@
         <a href="/contacts/">Контакты</a>
       </nav>
       <div class="contacts">
-        <a class="phone primary" href="tel:+79816666670">+7 (981) 666‑66‑70 — Денис</a>
-        <a class="phone" href="tel:+79096449832">+7 (909) 644‑98‑32 — Анис</a>
-        <a class="btn-cta" href="/contacts/">Заказать выезд</a>
+        <div class="phones">
+          <a class="phone primary" href="tel:+79816666670">+7 (981) 666‑66‑70 — Денис</a>
+          <a class="phone" href="tel:+79096449832">+7 (909) 644‑98‑32 — Анис</a>
+        </div>
+        <div class="actions">
+          <a class="btn-cta" href="/contacts/">Заказать выезд</a>
+          <a class="telegram" href="https://t.me/Nenaity" target="_blank" rel="noopener">@Nenaity</a>
+        </div>
       </div>
     </div>
   </header>
@@ -116,12 +121,12 @@
         <p><a href="tel:+79816666670">+7 (981) 666‑66‑70</a> — Денис</p>
         <p><a href="tel:+79096449832">+7 (909) 644‑98‑32</a> — Анис</p>
         <p><a href="mailto:info@wells-mo.ru">info@wells-mo.ru</a></p>
+        <p><a class="telegram" href="https://t.me/Nenaity" target="_blank" rel="noopener">Telegram: @Nenaity</a></p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Simple script for phone link CTA (no tracking)
     document.querySelectorAll('.btn-cta').forEach(el=>el.addEventListener('click',e=>{}));
   </script>
 </body>
