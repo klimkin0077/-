@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Wells-MO — Чистка и копка колодцев, дренаж участка</title>
-  <meta name="description" content="Премиум услуги: чистка колодцев, копка, дренаж участка. Выезд в день обращения. Денис +7 (981) 666-66-70">
+  <title>Wells-MO — Премиум чистка и копка колодцев, дренаж участка</title>
+  <meta name="description" content="Премиум услуги: чистка колодцев, копка, дренаж участка. Быстрый выезд. Денис +7 (981) 666-66-70">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
   <meta property="og:title" content="Wells-MO — Чистка и копка колодцев">
   <meta property="og:description" content="Премиум услуги по чистке и копке колодцев, устройству дренажа участка">
-  <meta property="og:type" content="website">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Wells-MO","telephone":"+7-981-666-66-70","email":"info@wells-mo.ru","url":"https://wells-mo.ru","address":{"@type":"PostalAddress","addressLocality":"ВашГород"},"service":[{"@type":"Service","name":"Чистка колодцев"},{"@type":"Service","name":"Копка колодцев"},{"@type":"Service","name":"Дренаж участка"}]}
   </script>
@@ -21,11 +21,10 @@
         <img src="/assets/logo.svg" alt="Wells-MO logo" class="logo-img">
         <span class="logo-text">Wells‑MO</span>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Главное меню">
         <a href="/">Главная</a>
         <a href="/services/">Услуги</a>
         <a href="/gallery/">Галерея</a>
-        <a href="/prices/">Цены</a>
         <a href="/contacts/">Контакты</a>
       </nav>
       <div class="contacts">
@@ -35,7 +34,7 @@
         </div>
         <div class="actions">
           <a class="btn-cta" href="/contacts/">Заказать выезд</a>
-          <a class="telegram" href="https://t.me/Nenaity" target="_blank" rel="noopener">@Nenaity</a>
+          <a class="telegram-btn" href="https://t.me/Nenaity" target="_blank" rel="noopener">Написать в Telegram</a>
         </div>
       </div>
     </div>
@@ -43,12 +42,42 @@
 
   <main>
     <section class="hero">
-      <div class="container">
-        <h1>Премиум чистка и копка колодцев. Дренаж участка.</h1>
-        <p class="lead">Профессиональные решения: от очистки колодца до сложного дренажа. Быстрый выезд, гарантия.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="/contacts/">Заказать бесплатный выезд</a>
-          <a class="btn" href="/services/">Наши услуги</a>
+      <div class="hero-bg">
+        <!-- Premium SVG abstract water/leaf background -->
+        <svg class="hero-svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0%" stop-color="#071014"/>
+              <stop offset="50%" stop-color="#0b0b0b"/>
+              <stop offset="100%" stop-color="#071014"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" x2="1">
+              <stop offset="0%" stop-color="#05302a" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#09281b" stop-opacity="0.25"/>
+            </linearGradient>
+            <filter id="grain"><feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch" result="noise"/><feColorMatrix type="saturate" values="0"/></filter>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#g1)" />
+          <g opacity="0.7">
+            <path d="M0,200 C300,100 600,300 900,200 C1200,100 1400,260 1440,240 L1440,600 L0,600 Z" fill="url(#g2)"></path>
+          </g>
+          <g opacity="0.08" filter="url(#grain)">
+            <rect width="100%" height="100%" fill="#ffd54f"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Премиум чистка и копка колодцев. Дренаж участка.</h1>
+          <p class="lead">Профессионально. Быстро. Гарантия качества. Выезд в день обращения.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="/contacts/">Заказать бесплатный выезд</a>
+            <a class="btn" href="/services/">Наши услуги</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- decorative water droplet / badge -->
+          <svg class="droplet" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg"><path fill="#ffbf00" d="M40 0 C60 20 70 40 40 80 C10 40 20 20 40 0 Z"/></svg>
         </div>
       </div>
     </section>
@@ -56,43 +85,22 @@
     <section class="services-preview">
       <div class="container">
         <h2>Наши услуги</h2>
-        <div class="cards">
-          <article class="card">
+        <div class="cards" id="services-list">
+          <article class="card service-card" data-service="cleaning">
             <h3>Чистка колодцев</h3>
             <p>Удаление ила, промывка, дезинфекция, проверка качества воды.</p>
-            <a href="/services/cleaning.html" class="more">Подробнее →</a>
+            <button class="more service-open" data-target="cleaning">Подробнее →</button>
           </article>
-          <article class="card">
+          <article class="card service-card" data-service="digging">
             <h3>Копка и углубление</h3>
             <p>Копка вручную и техникой, установка колец, герметизация.</p>
-            <a href="/services/digging.html" class="more">Подробнее →</a>
+            <button class="more service-open" data-target="digging">Подробнее →</button>
           </article>
-          <article class="card">
+          <article class="card service-card" data-service="drainage">
             <h3>Дренаж участка</h3>
             <p>Проектирование и монтаж поверхностного и глубинного дренажа.</p>
-            <a href="/services/drainage.html" class="more">Подробнее →</a>
+            <button class="more service-open" data-target="drainage">Подробнее →</button>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-preview">
-      <div class="container">
-        <div class="about-grid">
-          <div>
-            <h2>Почему выбирают нас</h2>
-            <ul class="bullets">
-              <li>10+ лет опыта в работе с колодцами и дренажем</li>
-              <li>Оборудование для любой глубины</li>
-              <li>Гарантия 1 год на выполненные работы</li>
-            </ul>
-            <a class="btn-outline" href="/about/">О компании</a>
-          </div>
-          <div class="promo-card">
-            <h3>Быстрый выезд</h3>
-            <p>Выезд в день обращения. Экстренные работы по устранению подтопления.</p>
-            <a class="btn" href="/contacts/">Заказать сейчас</a>
-          </div>
         </div>
       </div>
     </section>
@@ -100,15 +108,14 @@
     <section class="gallery-preview">
       <div class="container">
         <h2>Портфолио</h2>
-        <p>Примеры работ (вы сможете заменить фотографии на свои).</p>
-        <div class="gallery-grid">
-          <img src="/assets/placeholder-1.jpg" alt="пример работы">
-          <img src="/assets/placeholder-2.jpg" alt="пример работы">
-          <img src="/assets/placeholder-3.jpg" alt="пример работы">
+        <div class="gallery-grid" id="gallery">
+          <div class="gallery-item"><img src="/assets/photo-2.jpg" alt="Работа 1" loading="lazy"><div class="g-overlay"></div></div>
+          <div class="gallery-item"><img src="/assets/photo-3.jpg" alt="Работа 2" loading="lazy"><div class="g-overlay"></div></div>
+          <div class="gallery-item"><img src="/assets/photo-4.jpg" alt="Работа 3" loading="lazy"><div class="g-overlay"></div></div>
         </div>
-        <a class="btn" href="/gallery/">Смотреть всю галерею</a>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -121,13 +128,14 @@
         <p><a href="tel:+79816666670">+7 (981) 666‑66‑70</a> — Денис</p>
         <p><a href="tel:+79096449832">+7 (909) 644‑98‑32</a> — Анис</p>
         <p><a href="mailto:info@wells-mo.ru">info@wells-mo.ru</a></p>
-        <p><a class="telegram" href="https://t.me/Nenaity" target="_blank" rel="noopener">Telegram: @Nenaity</a></p>
+        <p><a class="telegram-btn small" href="https://t.me/Nenaity" target="_blank" rel="noopener">Написать в Telegram</a></p>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.querySelectorAll('.btn-cta').forEach(el=>el.addEventListener('click',e=>{}));
-  </script>
+  <!-- Floating Telegram button for desktop (hidden on small screens) -->
+  <a class="floating-telegram" href="https://t.me/Nenaity" target="_blank" rel="noopener" aria-label="Написать в Telegram">Написать в Telegram</a>
+
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
