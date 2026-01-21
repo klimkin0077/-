@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64">
+  <rect width="240" height="64" rx="10" fill="#0b0b0b" />
+  <text x="28" y="40" font-family="Montserrat, Arial, sans-serif" font-size="26" fill="#ffbf00" font-weight="700">Wells</text>
+  <text x="112" y="40" font-family="Montserrat, Arial, sans-serif" font-size="26" fill="#ffffff">-MO</text>
+  <circle cx="14" cy="32" r="8" fill="#ffbf00" />
+</svg>
